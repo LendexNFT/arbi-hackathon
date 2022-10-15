@@ -5,7 +5,7 @@
       "username": "Bilout",
       "profile_img": "profile.png",
       "price": "75,320 ETH",
-      "thumbnil": "tranding-1.jpg",
+      "thumbnail": "tranding-1.jpg",
       "remaing": "2023-03-04 4:00:00",
       "title": "laborum cupidatat sit"
     },
@@ -14,7 +14,7 @@
       "username": "Bilout",
       "profile_img": "profile.png",
       "price": "75,320 ETH",
-      "thumbnil": "tranding-2.jpg",
+      "thumbnail": "tranding-2.jpg",
       "remaing": "2023-03-04 4:00:00",
       "title": "velit occaecat voluptate"
     },
@@ -23,7 +23,7 @@
       "username": "Bilout",
       "profile_img": "profile.png",
       "price": "75,320 ETH",
-      "thumbnil": "tranding-3.jpg",
+      "thumbnail": "tranding-3.jpg",
       "remaing": "2023-03-04 4:00:00",
       "title": "est reprehenderit amet"
     },
@@ -32,7 +32,7 @@
       "username": "Bilout",
       "profile_img": "profile.png",
       "price": "75,320 ETH",
-      "thumbnil": "tranding-4.jpg",
+      "thumbnail": "tranding-4.jpg",
       "remaing": "2023-03-04 4:00:00",
       "title": "velit tempor nostrud"
     },
@@ -41,7 +41,7 @@
       "username": "Bilout",
       "profile_img": "profile.png",
       "price": "75,320 ETH",
-      "thumbnil": "tranding-4.jpg",
+      "thumbnail": "tranding-4.jpg",
       "remaing": "2023-03-04 4:00:00",
       "title": "adipisicing sit nostrud"
     },
@@ -50,7 +50,7 @@
       "username": "Bilout",
       "profile_img": "profile.png",
       "price": "75,320 ETH",
-      "thumbnil": "tranding-3.jpg",
+      "thumbnail": "tranding-3.jpg",
       "remaing": "2023-03-04 4:00:00",
       "title": "occaecat veniam commodo"
     },
@@ -59,7 +59,7 @@
       "username": "Bilout",
       "profile_img": "profile.png",
       "price": "75,320 ETH",
-      "thumbnil": "tranding-2.jpg",
+      "thumbnail": "tranding-2.jpg",
       "remaing": "2023-03-04 4:00:00",
       "title": "nostrud ex pariatur"
     },
@@ -68,17 +68,18 @@
       "username": "Bilout",
       "profile_img": "profile.png",
       "price": "75,320 ETH",
-      "thumbnil": "tranding-1.jpg",
+      "thumbnail": "tranding-1.jpg",
       "remaing": "2023-03-04 4:00:00",
       "title": "culpa ad proident"
     }
   ],
-  "dataBorrows": [{
+  "dataBorrows": [
+    {
       "id": 0,
       "username": "Bilout",
       "profile_img": "profile.png",
       "price": "75,320 ETH",
-      "thumbnil": "tranding-1.jpg",
+      "thumbnail": "tranding-1.jpg",
       "remaing": "2023-03-04 4:00:00",
       "title": "laborum cupidatat sit"
     },
@@ -87,7 +88,7 @@
       "username": "Bilout",
       "profile_img": "profile.png",
       "price": "75,320 ETH",
-      "thumbnil": "tranding-2.jpg",
+      "thumbnail": "tranding-2.jpg",
       "remaing": "2023-03-04 4:00:00",
       "title": "velit occaecat voluptate"
     },
@@ -96,9 +97,9 @@
       "username": "Bilout",
       "profile_img": "profile.png",
       "price": "75,320 ETH",
-      "thumbnil": "tranding-3.jpg",
+      "thumbnail": "tranding-3.jpg",
       "remaing": "2023-03-04 4:00:00",
       "title": "est reprehenderit amet"
     }
   ]
-    }
+}
