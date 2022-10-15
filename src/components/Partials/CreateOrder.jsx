@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useToggle from "../../hooks/useToggle";
 import ModalCom from "../Helpers/ModalCom";
 
-export default function CreateOrder ({ className }) {
+export default function CreateOrder({ className }) {
   const [balanceDropdown, setbalanceValue] = useToggle(false);
   const [moneyPopup, setPopup] = useToggle(false);
   const addMoneyHandler = () => {
@@ -15,15 +15,17 @@ export default function CreateOrder ({ className }) {
 
   return (
     <div
-      className={`create-nft w-full lg:h-[140px] shadow lg:flex rounded-lg justify-between items-center  md:p-9 p-4 bg-white border-b-2 border-pink mb-10 ${className || ""
-        }`}
+      className={`create-nft w-full lg:h-[140px] shadow lg:flex rounded-lg justify-between items-center  md:p-9 p-4 bg-white border-b-2  mb-10 ${
+        className || ""
+      } drop-shadow-lg shadow-pink`}
     >
       <div className="lg:w-8/12 w-full mb-8 lg:mb-0">
         <h1 className="text-2xl text-dark-gray font-bold mb-2">
           Market Overview
         </h1>
         <p className="text-base text-thin-light-gray tracking-wide">
-          Search all over the protocol for swap, lending and borrowing open orders and climb your favorite game without getting rid of your assets
+          Search all over the protocol for swap, lending and borrowing open
+          orders and climb your favorite game without getting rid of your assets
         </p>
       </div>
       <div className="flex-1 flex lg:justify-end">
@@ -41,9 +43,7 @@ export default function CreateOrder ({ className }) {
         <ModalCom action={addMoneyHandler} situation={moneyPopup}>
           <div className="lg:w-[580px] sm:w-[450px] w-full rounded-2xl h-auto bg-white">
             <div className="heading border-b border-light-purple lg:px-7 sm:px-5 px-3 py-6 flex items-center justify-between">
-              <h3 className="text-xl font-bold text-dark-gray">
-                Create Order
-              </h3>
+              <h3 className="text-xl font-bold text-dark-gray">Create Order</h3>
               <span onClick={addMoneyHandler}>
                 <svg
                   width="36"
@@ -96,8 +96,7 @@ export default function CreateOrder ({ className }) {
             </div>
           </div>
         </ModalCom>
-      )
-      }
+      )}
     </div>
   );
 }

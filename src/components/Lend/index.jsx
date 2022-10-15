@@ -9,7 +9,7 @@ export default function Lend () {
   return (
     <>
       <Layout>
-        <div className="my-wallet-wrapper w-full mb-10">
+        <div className="my-wallet-wrapper w-full mb-10 drop-shadow-lg">
           <div className="main-wrapper w-full">
             <div className="mb-5"><h1 className="text-26 font-bold text-dark-gray">LEND</h1></div>
             {/* Continer Assets Supply and Assets Borrow widgets */}
