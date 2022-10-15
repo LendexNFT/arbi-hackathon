@@ -19,7 +19,7 @@ export default function BorrowStatusCard({ datas, hidden = false }) {
     }
   };
   return (
-    <div className="card-style-one flex flex-col justify-between w-full  bg-white p-3 pb rounded-2xl">
+    <div className="card-style-one flex flex-col justify-between w-full  bg-white p-3 pb rounded-2xl drop-shadow-lg">
       <div className="content">
         {/* thumbnail */}
         <div className="w-full h-96">
