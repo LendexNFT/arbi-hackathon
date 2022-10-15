@@ -3,11 +3,11 @@ import topCreator2 from "../../assets/images/top-creator-2.png";
 import topCreator3 from "../../assets/images/top-creator-3.png";
 import topCreator4 from "../../assets/images/top-creator-4.png";
 import topCreator5 from "../../assets/images/top-creator-5.png";
-import DoughnutChart from "../Charts/DoughnutChart";
+// import DoughnutChart from "../Charts/DoughnutChart";
 import MiniLineChart from "../Charts/MiniLineChart";
 import Icons from "../Helpers/Icons";
 
-export default function RightSideBar () {
+export default function RightSideBar() {
   return (
     <>
       <div className="right-sidebar-wrapper overflow-y-scroll overflow-style-none 2xl:fixed 2xl:grid-cols-none 2xl:block grid lg:grid-cols-2 grid-cols-1 xl:gap-7 gap-4 h-full 2xl:pb-96  md:p-8">

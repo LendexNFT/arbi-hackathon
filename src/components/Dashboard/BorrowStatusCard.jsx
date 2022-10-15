@@ -5,9 +5,8 @@ import localImgLoad from "../../lib/localImgLoad";
 import CountDown from "../Helpers/CountDown";
 import Icons from "../Helpers/Icons";
 
-export default function BorrowStatusCard ({ datas, hidden = false }) {
-
-  console.log("datas", datas);
+export default function BorrowStatusCard({ datas, hidden = false }) {
+  // console.log("datas", datas);
 
   const [addFavorite, setValue] = useState(false);
   const favoriteHandler = () => {
@@ -20,24 +19,25 @@ export default function BorrowStatusCard ({ datas, hidden = false }) {
     }
   };
   return (
-    <div className="card-style-one flex flex-col justify-between w-full h-[387px] bg-white p-3 pb rounded-2xl">
+    <div className="card-style-one flex flex-col justify-between w-full  bg-white p-3 pb rounded-2xl drop-shadow-lg">
       <div className="content">
         {/* thumbnail */}
-        <div className="w-full h-40">
+        <div className="w-full h-96">
           {/* thumbnail image */}
           <div
             className="thumbnail w-full h-full rounded-xl overflow-hidden px-4 pt-4"
             style={{
               background: `url(${localImgLoad(
-                `images/${datas.thumbnil}`
+                `images/${datas.thumbnail}`
               )}) 0% 0% / cover no-repeat`,
             }}
           >
             <div className="flex justify-between ">
               <span
                 onClick={favoriteHandler}
-                className={`w-7 h-7 bg-white rounded-full flex justify-center items-center  cursor-pointer ${addFavorite ? "text-pink" : "text-dark-gray"
-                  }`}
+                className={`w-7 h-7 bg-white rounded-full flex justify-center items-center  cursor-pointer ${
+                  addFavorite ? "text-pink" : "text-dark-gray"
+                }`}
               >
                 <Icons name="love" />
               </span>
@@ -111,7 +111,13 @@ export default function BorrowStatusCard ({ datas, hidden = false }) {
                 Interests:
               </p>
 
-              <p className={`text-xs ${datas.interest === 'Paid' ? 'text-green-600' : 'text-red-400'}`}>{datas.interest}</p>
+              <p
+                className={`text-xs ${
+                  datas.interest === "Paid" ? "text-green-600" : "text-red-400"
+                }`}
+              >
+                {datas.interest}
+              </p>
               <p className="text-sm font-bold tracking-wide text-dark-gray">
                 {datas.price}
               </p>

@@ -19,9 +19,9 @@ export default function CreateOrder({ className }) {
 
   return (
     <div
-      className={`create-nft w-full lg:h-[140px] shadow lg:flex rounded-lg justify-between items-center  md:p-9 p-4 bg-white border-b-2 border-pink mb-10 ${
+      className={`create-nft w-full lg:h-[140px] shadow lg:flex rounded-lg justify-between items-center  md:p-9 p-4 bg-white border-b-2  mb-10 ${
         className || ""
-      }`}
+      } drop-shadow-lg shadow-pink`}
     >
       <div className="lg:w-8/12 w-full mb-8 lg:mb-0">
         <h1 className="text-2xl text-dark-gray font-bold mb-2">

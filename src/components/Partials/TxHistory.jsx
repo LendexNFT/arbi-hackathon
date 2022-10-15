@@ -4,11 +4,12 @@ import dataImage2 from "../../assets/images/data-table-user-2.png";
 import dataImage3 from "../../assets/images/data-table-user-3.png";
 import dataImage4 from "../../assets/images/data-table-user-4.png";
 
-export default function TxHistory ({ className }) {
+export default function TxHistory({ className }) {
   return (
     <div
-      className={`update-table w-full p-8 bg-white overflow-hidden rounded-2xl section-shadow ${className || ""
-        }`}
+      className={`update-table w-full p-8 bg-white overflow-hidden rounded-2xl section-shadow ${
+        className || ""
+      } drop-shadow-lg`}
     >
       <div className="header w-full sm:flex justify-between items-center mb-5">
         <div className="flex space-x-2 items-center mb-2 sm:mb-0">
@@ -194,7 +195,6 @@ export default function TxHistory ({ className }) {
                   <div className="flex flex-col">
                     <h1 className="font-bold text-xl text-dark-gray">
                       Steel shield
-
                     </h1>
                     <span className="text-sm text-thin-light-gray">
                       Owned by <span className="text-purple">Xoeyam</span>
