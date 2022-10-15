@@ -5,7 +5,7 @@ import { CartState } from '../../context/Context';
 export default function MyAssetsItem ({ product }) {
 
   const {
-    yuorSuppliesAssetsDispatch,
+    yourSuppliesAssetsDispatch,
   } = CartState();
 
   return (
@@ -38,7 +38,7 @@ export default function MyAssetsItem ({ product }) {
           <button
             type="button"
             onClick={() => {
-              yuorSuppliesAssetsDispatch({
+              yourSuppliesAssetsDispatch({
                 type: "ADD_TO_CART",
                 payload: product,
               });

@@ -1,14 +1,11 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
-import { CartState } from '../../context/Context';
+import { CartState } from "../../context/Context";
 import useToggle from "../../hooks/useToggle";
 import ModalCom from "../Helpers/ModalCom";
 
-export default function MyAssetsItem ({ product }) {
-
-  const {
-    yuorSuppliesAssetsDispatch,
-  } = CartState();
+export default function MyAssetsItem({ product }) {
+  const { yourSuppliesAssetsDispatch } = CartState();
 
   const [balanceDropdown, setbalanceValue] = useToggle(false);
   const [moneyPopup, setPopup] = useToggle(false);
@@ -20,36 +17,43 @@ export default function MyAssetsItem ({ product }) {
   console.log(balanceDropdown);
   return (
     <>
-    <li key={product.id} className="content-item py-3 border-b border-light-purple hover:border-purple">
-      <div className="flex justify-between items-center">
-        <div className="account-name flex space-x-4 items-center">
-          <div className="icon w-14 h-14 flex justify-center items-center">
-            {/* <img src={transaction1} alt="" className="" /> */}
-            <img src={require(`../../assets/images/${product.image}`)} alt="" className="w-full h-full" />
+      <li
+        key={product.id}
+        className="content-item py-3 border-b border-light-purple hover:border-purple"
+      >
+        <div className="flex justify-between items-center">
+          <div className="account-name flex space-x-4 items-center">
+            <div className="icon w-14 h-14 flex justify-center items-center">
+              {/* <img src={transaction1} alt="" className="" /> */}
+              <img
+                src={require(`../../assets/images/${product.image}`)}
+                alt=""
+                className="w-full h-full"
+              />
+            </div>
+            <div>
+              <div className="name">
+                <p className="text-base text-dark-gray font-medium mb-1">
+                  {product.name}
+                </p>
+              </div>
+              <div className="time">
+                <p className="text-sm text-thin-light-gray font-medium">
+                  {product.title}
+                </p>
+              </div>
+              <div className="time">
+                <p className="text-sm text-thin-light-gray font-medium">
+                  {product.wallet}
+                </p>
+              </div>
+            </div>
           </div>
           <div>
-            <div className="name">
-              <p className="text-base text-dark-gray font-medium mb-1">
-                {product.name}
-              </p>
-            </div>
-            <div className="time">
-              <p className="text-sm text-thin-light-gray font-medium">
-                {product.title}
-              </p>
-            </div>
-            <div className="time">
-              <p className="text-sm text-thin-light-gray font-medium">
-                {product.wallet}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div>
             {/* <button
             type="button"
               onClick={() => {
-                yuorSuppliesAssetsDispatch({
+                yourSuppliesAssetsDispatch({
                   type: "ADD_TO_CART",
                   payload: product,
                 });
@@ -65,26 +69,24 @@ export default function MyAssetsItem ({ product }) {
             >
               Lend
             </button>
-          <p className="usd text-base text-light-green text-right mr-2">
-            <Link
-              to="/shop-details"
-              state={{
-                id: product.id
-              }}
-            >
-              view detail
-            </Link>
-          </p>
+            <p className="usd text-base text-light-green text-right mr-2">
+              <Link
+                to="/shop-details"
+                state={{
+                  id: product.id,
+                }}
+              >
+                view detail
+              </Link>
+            </p>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
       {moneyPopup && (
         <ModalCom action={addMoneyHandler} situation={moneyPopup}>
           <div className="lg:w-[580px] sm:w-[450px] w-full rounded-2xl h-auto bg-white">
             <div className="heading border-b border-light-purple lg:px-7 sm:px-5 px-3 py-6 flex items-center justify-between">
-              <h3 className="text-xl font-bold text-dark-gray">
-                I want to
-              </h3>
+              <h3 className="text-xl font-bold text-dark-gray">I want to</h3>
               <span onClick={addMoneyHandler}>
                 <svg
                   width="36"
@@ -112,7 +114,7 @@ export default function MyAssetsItem ({ product }) {
                   <button
                     type="button"
                     onClick={() => {
-                      yuorSuppliesAssetsDispatch({
+                      yourSuppliesAssetsDispatch({
                         type: "ADD_TO_CART",
                         payload: product,
                       });
@@ -122,18 +124,20 @@ export default function MyAssetsItem ({ product }) {
                     Lend
                   </button>
                 </div>
-                <div><button
-                  type="button"
-                  onClick={() => {
-                    yuorSuppliesAssetsDispatch({
-                      type: "ADD_TO_CART",
-                      payload: product,
-                    });
-                  }}
-                  className="w-[182px] h-11 self-auto   justify-center items-center btn-gradient text-base rounded-full text-white text-2xl"
-                >
-                  Borrow
-                </button></div>
+                <div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      yourSuppliesAssetsDispatch({
+                        type: "ADD_TO_CART",
+                        payload: product,
+                      });
+                    }}
+                    className="w-[182px] h-11 self-auto   justify-center items-center btn-gradient text-base rounded-full text-white text-2xl"
+                  >
+                    Borrow
+                  </button>
+                </div>
               </div>
 
               <div className="add-money-btn flex justify-center items-center mt-5">
@@ -147,9 +151,7 @@ export default function MyAssetsItem ({ product }) {
             </div>
           </div>
         </ModalCom>
-      )
-      }
+      )}
     </>
   );
 }
-

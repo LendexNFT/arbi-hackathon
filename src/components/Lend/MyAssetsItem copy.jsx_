@@ -10,7 +10,7 @@ import ModalCom from "../Helpers/ModalCom";
 export default function MyAssetsItem ({ product }) {
 
   const {
-    yuorSuppliesAssetsDispatch,
+    yourSuppliesAssetsDispatch,
   } = CartState();
 
   const [balanceDropdown, setbalanceValue] = useToggle(false);
@@ -70,7 +70,7 @@ export default function MyAssetsItem ({ product }) {
             {/* <button
             type="button"
               onClick={() => {
-                yuorSuppliesAssetsDispatch({
+                yourSuppliesAssetsDispatch({
                   type: "ADD_TO_CART",
                   payload: product,
                 });
@@ -279,7 +279,7 @@ export default function MyAssetsItem ({ product }) {
                   <button
                     type="button"
                     onClick={() => {
-                      yuorSuppliesAssetsDispatch({
+                      yourSuppliesAssetsDispatch({
                         type: "ADD_TO_CART",
                         payload: product,
                       });
