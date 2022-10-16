@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { CartState } from "../../context/Context";
 import useToggle from "../../hooks/useToggle";
 import ModalCom from "../Helpers/ModalCom";
@@ -57,12 +57,11 @@ export default function MyAssetsItem({ product }) {
     <>
       <li
         key={product.id}
-        className="content-item py-3 border-b border-light-purple hover:border-purple"
+        className="content-item"
       >
         <div className="flex justify-between items-center">
           <div className="account-name flex space-x-4 items-center">
             <div className="icon w-14 h-14 flex justify-center items-center">
-              {/* <img src={transaction1} alt="" className="" /> */}
               <img
                 src={`${product.media[0].raw}`}
                 alt=""
@@ -100,14 +99,14 @@ export default function MyAssetsItem({ product }) {
           >
             Add
           </button> */}
-            <button
+            {/* <button
               onClick={() => addMoneyHandler()}
               type="button"
-              className="w-[92px] flex justify-center items-center btn-gradient text-base rounded-full text-white"
+              className="h-10 w-10 flex justify-center items-center btn-gradient text-base rounded-full text-white"
             >
-              Lend
-            </button>
-            <p className="usd text-base text-light-green text-right mr-2">
+              <PlusIcon height={32} />
+            </button> */}
+            {/* <p className="usd text-base text-light-green text-right mr-2">
               <Link
                 to="/shop-details"
                 state={{
@@ -116,7 +115,7 @@ export default function MyAssetsItem({ product }) {
               >
                 view detail
               </Link>
-            </p>
+            </p> */}
           </div>
         </div>
       </li>
@@ -166,8 +165,8 @@ export default function MyAssetsItem({ product }) {
     "
                   />
                 </div>
-
-                <div>
+                {/* CONTRACT */}
+                {/* <div>
                   <h3 className="mt-4 font-semibold text-gray-900 dark:text-white">
                     Contract
                   </h3>
@@ -229,8 +228,8 @@ export default function MyAssetsItem({ product }) {
                       </div>
                     </li>
                   </ul>
-                </div>
-
+                </div> */}
+                {/* INTEREST */}
                 <div className="flex mt-5 mb-1">
                   <div className="w-1/3 ...">
                     <div className="relative flex items-start">

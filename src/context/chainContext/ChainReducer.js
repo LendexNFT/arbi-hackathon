@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { InitChainContext } from "./ChainContext";
 
 export const ChainReducer = (state = InitChainContext, action) => {
