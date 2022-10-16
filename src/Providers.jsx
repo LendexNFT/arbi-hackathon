@@ -1,17 +1,27 @@
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { useMemo, useReducer } from "react";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
-import { alchemyProvider } from "wagmi/providers/alchemy";
-import { publicProvider } from "wagmi/providers/public";
+import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 import {
   ChainContext,
   InitChainContext,
 } from "./context/chainContext/ChainContext";
 import { ChainReducer } from "./context/chainContext/ChainReducer";
 
+const quicknodeRpc =
+  "https://prettiest-bold-rain.arbitrum-mainnet.discover.quiknode.pro/30bc570046893bf9a7b9dfe19438e2342e27d45b/";
+
 const { chains, provider } = configureChains(
   [chain.arbitrum],
-  [alchemyProvider({ apiKey: process.env.ALCHEMY_ID }), publicProvider()]
+  [
+    // alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
+    // publicProvider(),
+    jsonRpcProvider({
+      rpc: (chain) => ({
+        http: quicknodeRpc,
+      }),
+    }),
+  ]
 );
 
 const { connectors } = getDefaultWallets({

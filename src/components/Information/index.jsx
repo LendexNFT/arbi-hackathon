@@ -16,7 +16,6 @@ export default function Information() {
     abi: ORACLE_ABI,
     functionName: "latestAnswer",
   });
-  console.log("data", data.toNumber(), isError, isLoading);
   return (
     <>
       <Layout>
