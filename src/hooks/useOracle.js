@@ -1,38 +1,27 @@
-import { ethers } from "ethers";
-import { useState } from "react";
-import ORACLE_ABI from "../contracts/abis/OracleABI.json";
+import { useEffect, useState } from "react";
+import { callOracle } from "../utils/callOracle";
 
-const useOracle = () => {
+const useOracle = (oracleAddress) => {
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState({});
+  const [price, setPrice] = useState(0);
 
   useEffect(() => {
-    const fetchOraclePrice = async (oracleAddress) => {
+    const get = async () => {
       setLoading(true);
       try {
-        const rpc =
-          "https://alien-twilight-voice.arbitrum-goerli.discover.quiknode.pro/f08321d64f93dcd1f396e09c85713017755de651/";
-        const ethersProvider = new ethers.providers.JsonRpcProvider(rpc);
-        const contract = new ethers.Contract(
-          oracleAddress,
-          ORACLE_ABI,
-          ethersProvider
-        );
-        const tx = await contract.latestRoundData();
-        const response = await tx;
-        const formatted = response.answer.toNumber();
-        console.log("Oracle data ", formatted);
-        setData(response);
+        let price = await callOracle(oracleAddress);
+        console.log(price);
+        setPrice(price);
         setLoading(false);
       } catch (error) {
         setLoading(false);
         console.log("Error ", error);
       }
     };
-    !loading && fetchOraclePrice();
-  }, [collectionAddress]);
+    !loading && get();
+  }, [oracleAddress]);
 
-  return { data, loading };
+  return { price, loading };
 };
 
 export default useOracle;
