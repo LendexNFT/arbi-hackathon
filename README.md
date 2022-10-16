@@ -26,3 +26,7 @@ P2P loans with any combination of quantity and type of tokens(ERC20, ERC1155, ER
 ## Track
 
 ### Metaverse: `GameFi & NFT's`
+
+## Smart contracts Demo
+
+[Link](https://youtu.be/FqqK-SVHy70)
