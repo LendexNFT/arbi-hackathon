@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/images/nub_logo_276x80.png";
+import logo from "../../assets/newlogo.jpg";
 import Icons from "../Helpers/Icons";
 
 export default function MobileSidebar({ sidebar, action }) {
