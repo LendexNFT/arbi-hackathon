@@ -1,10 +1,13 @@
 import { Alchemy, Network } from "alchemy-sdk";
 import { useEffect, useState } from "react";
+import { useRecoilState } from "recoil";
 import { useAccount } from "wagmi";
-
-import MyAssetsWidget from "./MyAssetsToLend";
-
+import useNftCollections from "../../hooks/useNftCollections";
+import { nftCollectionsState } from "../../state/nftCollectionsAtom";
+import { orderListState } from "../../state/orderListAtom";
 import Layout from "../Partials/Layout";
+import MyAssetsWidget from "./MyAssetsToLend";
+import MyLendOrdersWidget from "./MyLendOrdersWidget";
 
 const settings = {
   apiKey: process.env.ALCHEMY_KEY,
@@ -12,10 +15,21 @@ const settings = {
 };
 
 export default function Lend() {
+  const [orderList, setOrderList] = useRecoilState(orderListState);
   const [loading, setLoading] = useState();
   const [nfts, setNfts] = useState([]);
+  const { collections, loading: collectionsLoading } = useNftCollections();
   const { address } = useAccount();
   const alchemy = new Alchemy(settings);
+  const [nftCollections, setNftCollections] =
+    useRecoilState(nftCollectionsState);
+
+  useEffect(() => {
+    if (!collectionsLoading) {
+      setNftCollections(collections);
+      // console.log("check collections", collections, nftCollections);
+    }
+  }, [collections]);
 
   useEffect(() => {
     const fetch = async () => {
@@ -51,6 +65,12 @@ export default function Lend() {
               </div>
             </div>
           </div>
+        </div>
+        <div>
+          <MyLendOrdersWidget />
+        </div>
+        <div>
+          
         </div>
       </Layout>
     </>

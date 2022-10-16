@@ -52,7 +52,7 @@ export default function MyAssetsItem({ product }) {
 
   const includeAddressReserved = watch("includeAddressReserved");
 
-  console.log(balanceDropdown);
+  // console.log(balanceDropdown);
   return (
     <>
       <li

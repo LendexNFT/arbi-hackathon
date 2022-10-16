@@ -13,7 +13,7 @@ export default function MyAssetsWidget({ assets }) {
       <div className="content">
         <ul>
           {assets.map((nft) => (
-            <MyAssetsItem key={nft.tokenId} product={nft} />
+            <MyAssetsItem key={nft} product={nft} />
           ))}
         </ul>
       </div>

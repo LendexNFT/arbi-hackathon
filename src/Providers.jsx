@@ -1,5 +1,6 @@
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { useMemo, useReducer } from "react";
+import { RecoilRoot } from "recoil";
 import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 import {
@@ -51,13 +52,15 @@ const Providers = ({ children }) => {
 
   return (
     <>
-      <WagmiConfig client={wagmiClient}>
-        <RainbowKitProvider chains={chains}>
-          <ChainContextProvider value={ChainState}>
-            {children}
-          </ChainContextProvider>
-        </RainbowKitProvider>
-      </WagmiConfig>
+      <RecoilRoot>
+        <WagmiConfig client={wagmiClient}>
+          <RainbowKitProvider chains={chains}>
+            <ChainContextProvider value={ChainState}>
+              {children}
+            </ChainContextProvider>
+          </RainbowKitProvider>
+        </WagmiConfig>
+      </RecoilRoot>
     </>
   );
 };
