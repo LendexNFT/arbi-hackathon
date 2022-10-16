@@ -10,6 +10,9 @@ P2P loans with any combination of quantity and type of tokens(ERC20, ERC1155, ER
 
 ### Arbitrum contracts
 
+- [Contracts Repo](https://github.com/Nubicuo/nubicuo-contracts)
+- Factory Address Contract: <https://goerli.arbiscan.io/address/0x1EBD0dB8c34860de5F1a6E4Da4B9fDD074e9F190>
+
 ### Tools
 
 - [Subgraph for Treasure Marketplace](https://thegraph.com/hosted-service/subgraph/treasureproject/marketplace), get info like contract, name, floorPrice, and some stats for the users.
