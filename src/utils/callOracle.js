@@ -1,6 +1,6 @@
 import { Contract } from "ethers";
 import { JsonRpcProvider } from "ethers-providers";
-import ORACLE_ABI from "../contracts/abis/OracleABI.json";
+import ORACLE_ABI from "../config/constants/contracts/abis/OracleABI.json";
 
 export const callOracle = async (oracleAddress) => {
   try {

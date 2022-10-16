@@ -1,21 +1,19 @@
 import React from "react";
 import { useContractRead } from "wagmi";
-import ORACLE_ABI from "../../contracts/abis/OracleABI.json";
+import ORACLE_ABI from "../../config/constants/contracts/abis/OracleABI.json";
+import { magicUsdOracle } from "../../config/constants/oracles";
 import useNftCollections from "../../hooks/useNftCollections";
 import Layout from "../Partials/Layout";
 import CollectionItem from "./CollectionItem";
 
-const magicUsdOracle = "0x47E55cCec6582838E173f252D08Afd8116c2202d";
-
-// id, name, contract, stats: floorprice volume
 export default function Information() {
   const { collections, loading } = useNftCollections();
-  // const { price, loading: loadingOracle } = useOracle(magicUsdOracle);
   const { data, isError, isLoading } = useContractRead({
     address: magicUsdOracle,
     abi: ORACLE_ABI,
     functionName: "latestAnswer",
   });
+
   return (
     <>
       <Layout>

@@ -284,7 +284,7 @@ const Context = ({ children }) => {
     },
   ];
 
-  console.log("products", products);
+  // console.log("products", products);
 
   const [state, dispatch] = useReducer(cartReducer, {
     products: products,
