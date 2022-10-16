@@ -1,10 +1,10 @@
 import React from "react";
-import DataOverview from "../components/Information";
+import Information from "../components/Information";
 
 function InfoPage() {
   return (
     <>
-      <DataOverview />
+      <Information />
     </>
   );
 }
