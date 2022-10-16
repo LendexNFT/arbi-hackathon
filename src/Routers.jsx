@@ -4,11 +4,12 @@ import FourZeroFour from "./components/FourZeroFour";
 import ScrollToTop from "./components/Helpers/ScrollToTop";
 import BorrowPage from "./views/BorrowPage";
 import DashboardPage from "./views/DashboardPage";
+import InfoPage from "./views/InfoPage";
 import LendPage from "./views/LendPage";
 import OverviewPage from "./views/OverviewPage";
 import ShopAssetsDetailsPage from "./views/ShopAssetsDetailsPage";
 
-export default function Routers () {
+export default function Routers() {
   return (
     <ScrollToTop>
       <Routes>
@@ -19,9 +20,9 @@ export default function Routers () {
         <Route exact path="/lend" element={<LendPage />} />
         <Route exact path="/borrow" element={<BorrowPage />} />
         <Route exact path="/dashboard" element={<DashboardPage />} />
-        
-        {/* private route */}
+        <Route exact path="/information" element={<InfoPage />} />
 
+        {/* private route */}
 
         <Route path="*" element={<FourZeroFour />} />
       </Routes>

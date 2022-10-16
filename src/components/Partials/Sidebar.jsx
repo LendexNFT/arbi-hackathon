@@ -178,6 +178,26 @@ export default function Sidebar({ sidebar, action }) {
                   </span>
                 </NavLink>
               </li>
+              <li className="item group">
+                <NavLink
+                  to="/information"
+                  className={`nav-item flex items-center ${
+                    ((navData) => (navData.isActive ? "active" : ""),
+                    sidebar ? "justify-start space-x-3.5" : "justify-center")
+                  }`}
+                >
+                  <span className="item-icon group-hover:bg-purple group-hover:text-white w-8 h-8 flex justify-center items-center transition-all duration-300 ease-in-out  bg-light-purple rounded-full text-dark-gray">
+                    <Icons name="setting" />
+                  </span>
+                  <span
+                    className={`item-content group-hover:text-purple text-[18px] transition-all duration-300 ease-in-out text-lighter-gray relative font-medium ${
+                      sidebar ? "active flex-1" : "w-0"
+                    }`}
+                  >
+                    Information
+                  </span>
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>
