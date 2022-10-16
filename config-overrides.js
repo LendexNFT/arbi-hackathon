@@ -19,11 +19,12 @@ module.exports = function override(webpackConfig) {
       Buffer: ["buffer", "Buffer"],
     }),
   ]);
-  // webpackConfig.module.rules.push({
-  //   test: /\.mjs$/,
-  //   include: /node_modules/,
-  //   type: "javascript/auto",
-  // });
+  webpackConfig.module.rules.push({
+    test: /\.m?js/,
+    resolve: {
+      fullySpecified: false,
+    },
+  });
 
   return webpackConfig;
 };

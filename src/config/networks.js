@@ -9,6 +9,13 @@ if (process.env.NODE_ENV !== "production") {
       currency: "MATIC",
       provider: null,
     },
+    {
+      id: 421613,
+      name: "Arbitrum Goerli",
+      icon: "",
+      currency: "AETH",
+      provider: null,
+    },
   ];
 } else {
   networks = [

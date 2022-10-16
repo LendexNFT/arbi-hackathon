@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import useNftData from "../../hooks/useNftData";
 import useToggle from "../../hooks/useToggle";
 import ModalCom from "../Helpers/ModalCom";
 
@@ -12,6 +13,9 @@ export default function CreateOrder({ className }) {
   };
 
   console.log(balanceDropdown);
+  // useEffect(() => {
+  //   fetchOraclePrice("0x62CAe0FA2da220f43a51F86Db2EDb36DcA9A5A08"); // 0x47E55cCec6582838E173f252D08Afd8116c2202d
+  // });
 
   return (
     <div
