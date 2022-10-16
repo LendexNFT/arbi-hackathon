@@ -1,7 +1,7 @@
 import { Alchemy, Network } from "alchemy-sdk";
 import { useEffect, useState } from "react";
 import { useRecoilState } from "recoil";
-import { useAccount } from "wagmi";
+import { useAccount, useSignMessage } from "wagmi";
 import useNftCollections from "../../hooks/useNftCollections";
 import { nftCollectionsState } from "../../state/nftCollectionsAtom";
 import { orderListState } from "../../state/orderListAtom";
@@ -23,6 +23,9 @@ export default function Lend() {
   const alchemy = new Alchemy(settings);
   const [nftCollections, setNftCollections] =
     useRecoilState(nftCollectionsState);
+  const { data, isError, isLoading, isSuccess, signMessage } = useSignMessage({
+    message: "Lend NFT",
+  });
 
   useEffect(() => {
     if (!collectionsLoading) {
@@ -71,8 +74,15 @@ export default function Lend() {
         </div>
         {/* BUTTONS */}
         <div className="flex mt-24 justify-center space-x-24">
-          <button className="bg-blue-300 px-8 py-4 text-4xl rounded-lg">CANCEL</button>
-          <button className="bg-blue-300 px-8 py-4 text-4xl rounded-lg uppercase">set order</button>
+          <button className="bg-blue-300 px-8 py-4 text-4xl rounded-lg">
+            CANCEL
+          </button>
+          <button
+            className="bg-blue-300 px-8 py-4 text-4xl rounded-lg uppercase"
+            onClick={() => signMessage()}
+          >
+            set order
+          </button>
         </div>
       </Layout>
     </>
