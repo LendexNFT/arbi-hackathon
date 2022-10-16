@@ -69,8 +69,10 @@ export default function Lend() {
         <div>
           <MyLendOrdersWidget />
         </div>
-        <div>
-          
+        {/* BUTTONS */}
+        <div className="flex mt-24 justify-center space-x-24">
+          <button className="bg-blue-300 px-8 py-4 text-4xl rounded-lg">CANCEL</button>
+          <button className="bg-blue-300 px-8 py-4 text-4xl rounded-lg uppercase">set order</button>
         </div>
       </Layout>
     </>
